@@ -1,4 +1,5 @@
 venv/
+.virt/
 
 *.pyc
 __pycache__/

@@ -23,13 +23,10 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route('/hello')
+    @app.route('/')
     def hello():
-        return 'Hello, World!'
-
-    from . import routes
-    app.register_blueprint(routes.bp)
-    
+        return """<p>This app has been redeployed on AWS:</p>
+        <a href="http://myportfolio-env.eba-ue9mdayw.us-east-1.elasticbeanstalk.com/home"<p>http://myportfolio-env.eba-ue9mdayw.us-east-1.elasticbeanstalk.com/home</p></a>
+        """
 
     return app
-
